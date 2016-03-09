@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+import codecs
+import io
+import sys
+
+from diff_highlighter.main import main
+
+
+if __name__ == '__main__':
+    input_stream = io.open(0)
+
+    # Fix output encoding when piped
+    if sys.stdout.encoding is None:
+        sys.stdout = codecs.getwriter('utf8')(sys.stdout)
+
+    try:
+        for line in main(input_stream):
+            sys.stdout.write(line)
+    except IOError:
+        try:
+            sys.stdout.close()
+        except IOError:
+            pass
+        try:
+            sys.stderr.close()
+        except IOError:
+            pass
+        sys.exit(0)
