@@ -27,7 +27,7 @@ get_token_type = operator.itemgetter(0)
 get_token_text = operator.itemgetter(1)
 
 
-WORD_FIND_RE = re.compile(r'([a-zA-Z_-]+|\d+| +|[\s\S])')
+WORD_FIND_RE = re.compile(r'([a-zA-Z_-]+|[\d.]+| +|[\s\S])')
 
 
 def split_words(text):
