@@ -12,7 +12,7 @@ buildPythonPackage rec {
 
   meta = {
     description = "A command line tool to apply language-specific highlighting to git diffs";
-    homepage = "https://github.com/met48/diff-highlight-tokens";
+    homepage = "https://github.com/Met48/diff-highlight-tokens";
     license = pkgs.lib.licenses.mit;
   };
 }

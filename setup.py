@@ -6,7 +6,7 @@ setup(
     name='diff-highlight-tokens',
     version='0.2.0',
     scripts=['diff-highlight-tokens'],
-    description='A script to highlight git diffs using language-specific tokenization',
+    description='A command line tool to apply language-specific highlighting to git diffs',
     author='Andrew Sutton',
     author_email='me@andrewcsutton.com',
     url='https://github.com/Met48/diff-highlight-tokens',
