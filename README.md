@@ -16,13 +16,26 @@ Pipe any git diff to `diff-highlight-tokens`. To always use this script, configu
 
 ## Installation
 
-Clone the repo. Then:
+Run
+
+```lang=sh
+sudo pip install diff-highlight-tokens
+
+# OR
+
+sudo easy_install diff-highlight-tokens
+```
+
+Alternatively, to install from source clone the repo and then:
 
 ```lang=sh
 python setup.py install
-```
 
-If using Nix:
-```lang=sh
+# Or, if using Nix
 nix-env -f . -i
 ```
+
+## Requirements
+
+- Python 2.7, 3.3, 3.4, 3.5
+- Pygments >= 2.1
