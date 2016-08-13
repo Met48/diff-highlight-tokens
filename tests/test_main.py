@@ -234,3 +234,17 @@ def test_whitespace_continuation():
         '{add}+{reset}\n',
         '{add}+c{reset}\n',
     ])
+
+
+def test_rst_word_diff():
+    check([
+        '--- a/myfile.rst\n',
+        '+++ b/myfile.rst\n',
+        '{remove}-- a list item\n',
+        '{add}+- a listed item\n',
+    ], [
+        '--- a/myfile.rst\n',
+        '+++ b/myfile.rst\n',
+        '{remove}-- a {diff}list{nodiff} item{reset}\n',
+        '{add}+- a {diff}listed{nodiff} item{reset}\n',
+    ])

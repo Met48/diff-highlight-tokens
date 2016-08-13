@@ -20,6 +20,7 @@ WORD_TOKENS = set([
     pygments.token.Comment,
     pygments.token.Error,
     pygments.token.String,
+    pygments.token.Text,
 ])
 
 
