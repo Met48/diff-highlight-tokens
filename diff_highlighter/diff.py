@@ -1,7 +1,7 @@
 import difflib
 import re
 
-from working_with_tokens import get_token_text
+from .working_with_tokens import get_token_text
 
 
 def is_token_junk(token):
