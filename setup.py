@@ -2,10 +2,6 @@
 from setuptools import setup, find_packages
 
 
-def get_file_content(filename):
-    with open(filename, 'r') as f:
-        return f.read()
-
 setup(
     name='diff-highlight-tokens',
     version='0.2.0',
@@ -15,7 +11,9 @@ setup(
     author_email='me@andrewcsutton.com',
     url='https://github.com/Met48/diff-highlight-tokens',
     packages=find_packages(),
-    install_requires=get_file_content('requirements.txt').splitlines(),
+    install_requires=[
+        'pygments>=2.1'
+    ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
