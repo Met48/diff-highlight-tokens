@@ -1,6 +1,6 @@
 { pkgs, stdenv, pythonPackages }:
 let
-  version = "0.1";
+  version = "0.2.0";
   self = pythonPackages;
   buildPythonPackage = self.buildPythonPackage;
 in

@@ -8,7 +8,7 @@ def get_file_content(filename):
 
 setup(
     name='diff-highlight-tokens',
-    version='0.1',
+    version='0.2.0',
     scripts=['diff-highlight-tokens'],
     description='A script to highlight git diffs using language-specific tokenization',
     author='Andrew Sutton',
